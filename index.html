@@ -12,14 +12,15 @@
     <h1>Hangman</h1>
     <p>Select a difficulty to get started:</p>
     <div class="difficulty-select">
-        <button class="btn" id="selectEasy" value="Easy">Easy</button>
-        <button class="btn" id="selectMedium" value="Medium">Medium</button>
-        <button class="btn" id="selectHard" value="Hard">Hard</button>
+        <button class="btn" id="selectEasy" value="Easy">Easy</button>  <!-- onclick="currentSession.startGame('Easy')" -->
+        <button class="btn" id="selectMedium" value="Medium" onclick="currentSession.startGame('Medium')">Medium</button>
+        <button class="btn" id="selectHard" value="Hard" onclick="currentSession.startGame('Hard')">Hard</button>
     </div>
     <p>Wins: <span id="yourWins">0</span></p>
     <p>Losses: <span id="yourLosses">0</span></p>
     <p id="displayStatus"></p>
     <div class="in-game-information">
+        <p>Current Difficulty: <span id="currentDifficulty"></span></p>
         <p>Current Word: <span id="currentWord"></span></p>
         <p>Number of Guesses Remaining: <span id="guessesRemaining"></span></p>
         <p>Letters Already Guessed: <span id="lettersGuessed"></span></p>

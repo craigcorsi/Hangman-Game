@@ -17,7 +17,7 @@ var currentSession = {
         'Easy': 10,
         'Normal': 6,
         'Hard': 4,
-        'Unlisted': 2
+        'Expert': 2
     },
 
     startGame: function(difficulty) {
@@ -34,6 +34,8 @@ var currentSession = {
         // set up lettersAlreadyGuessed and lettersToGuess
         this.lettersAlreadyGuessed = [];
         this.lettersToFind = ['b', 'e', 't', 'h', 'c', 'a', 'n', 'g', 'y', 'o', 'u', 'w', 's', 'i', 'r', 'l', 'd'];
+
+        document.getElementById('currentDifficulty').innerHTML = difficulty;
     },
 
     endGame: function(result) {
@@ -47,7 +49,10 @@ var currentSession = {
             document.getElementById('yourLosses').innerHTML = this.numberOfLosses;
         }
 
+        // Reset difficulty
         this.difficulty = '',
+        document.getElementById('currentDifficulty').innerHTML = '';
+
         this.numberOfGuessesRemaining = 0,
         this.phraseThisRound = '',
         this.phraseToGuess = '', 
@@ -56,13 +61,33 @@ var currentSession = {
         this.lettersAlreadyGuessed = []
     }
 }
-console.log(currentSession);
 
-document.getElementById('selectEasy').onclick = function() {
-    currentSession.startGame(this.innerHTML);
-    console.log(currentSession);
-    currentSession.endGame(false);
-    console.log(currentSession);
+document.getElementById('selectEasy').onclick = function (event) {
+    if (!currentSession.inGame) {
+        currentSession.startGame("Easy");
+    }
+}
+
+document.getElementById('selectMedium').onclick = function (event) {
+    if (!currentSession.inGame) {
+        currentSession.startGame("Medium");
+    }
+}
+
+document.getElementById('selectHard').onclick = function (event) {
+    if (!currentSession.inGame) {
+        currentSession.startGame("Hard");
+    }
+}
+
+document.onkeyup = function (event) {
+    if (event.key.toLowerCase() == "x" && !currentSession.inGame) {
+        currentSession.startGame("Expert");
+    }
+
+    if (event.key.toLowerCase() == "f" && currentSession.inGame) {
+        currentSession.endGame(false);
+    }
 }
 
 // initialize session
