@@ -1,3 +1,58 @@
+
+// To be done:
+
+/* 
+
+HTML with "press 'Escape' to forfeit" (minor)
+Display the phrase from a new game in the browser (minor)
+
+set up guessLetter method (major):
+    Make it impossible to guess the same letter twice (minor)
+    Update properties and HTML test according to a new letter guess (moderate)
+
+Implement game-win within guessLetter (moderate)
+Implement game-loss within guessLetter (moderate)
+
+(Check all work up to this point by completing several of the same game, across all four difficulty levels, with win, loss, and forfeit.) (Moderate)
+
+Store quotes in an external file quotes.js all in one array (moderate -- I want over 100 short quotes and sayings)
+
+Import array (minor)
+Upon starting game, pull a random quote (moderate)
+Play several games (moderate)
+
+Show and hide content depending on isGame (moderate)
+Display option for Expert difficulty upon completing Hard (moderate)
+
+Clarify theme (moderate)
+Style according to theme (major)
+Add background music in an iframe player (moderate)
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 'var phraseDictionary' and put the phrases here???
 
 var currentSession = {
@@ -80,34 +135,33 @@ document.getElementById('selectHard').onclick = function (event) {
     }
 }
 
+// All keypress events handled here
 document.onkeyup = function (event) {
+    console.log(event.key);
+    // Start a new game on Expert difficulty level
     if (event.key.toLowerCase() == "x" && !currentSession.inGame) {
         currentSession.startGame("Expert");
     }
-
-    if (event.key.toLowerCase() == "f" && currentSession.inGame) {
+    
+    // Forfeit an existing game
+    if (event.key.toLowerCase() == "Escape" && currentSession.inGame) {
         currentSession.endGame(false);
     }
 }
 
-// initialize session
-
-// initialize game after pressing any key to begin
 
 // display everything you need to know
-
-// listen for key presses...
 
 // update object properties accordingly
 
 
 // 'check status of game?' (Maybe as a method?)
     // when numberOfGuessesRemaining hits zero, lose the game
-        // update losses, reset, enter between-games mode
+        // update losses, reset
         // Change the HTML
 
     // when length of lettersToGuess hits zero, win the game
-        // update wins, reset, enter between-games mode
+        // update wins, reset
         // Change the HTML
 
 
