@@ -34,8 +34,6 @@ var currentSession = {
         // set up lettersAlreadyGuessed and lettersToGuess
         this.lettersAlreadyGuessed = [];
         this.lettersToFind = ['b', 'e', 't', 'h', 'c', 'a', 'n', 'g', 'y', 'o', 'u', 'w', 's', 'i', 'r', 'l', 'd'];
-    
-        document.getElementById('displayStatus').innerHTML = 'You have selected the difficulty ' + difficulty;
     },
 
     endGame: function(result) {
@@ -43,8 +41,10 @@ var currentSession = {
         this.inGame = false;
         if (result) {
             this.numberOfWins++;
+            document.getElementById('yourWins').innerHTML = this.numberOfWins;
         } else {
             this.numberOfLosses++;
+            document.getElementById('yourLosses').innerHTML = this.numberOfLosses;
         }
 
         this.difficulty = '',
@@ -54,16 +54,15 @@ var currentSession = {
         this.phraseGuessed = '',
         this.lettersToFind = [],
         this.lettersAlreadyGuessed = []
-
-        document.getElementById('displayStatus').innerHTML = 'Hangman';
     }
 }
 console.log(currentSession);
 
-document.getElementsByClassName('btn').onclick = function() {
-    console.log('Heyo');
-    console.log(this.innerHTML);
+document.getElementById('selectEasy').onclick = function() {
     currentSession.startGame(this.innerHTML);
+    console.log(currentSession);
+    currentSession.endGame(false);
+    console.log(currentSession);
 }
 
 // initialize session
