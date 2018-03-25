@@ -1,3 +1,5 @@
+// 'var phraseDictionary' and put the phrases here???
+
 var difficultyKey = {
     'Easy': 10,
     'Normal': 6,
