@@ -3,7 +3,7 @@
 
 /*
 
-Store quotes in an external file quotes.js all in one array (moderate -- I want over 100 short quotes and sayings)
+Find 25 more quotes, maybe weirder ones? (minor)
 
 Import array (minor)
 Upon starting game, pull a random quote (moderate)
@@ -12,9 +12,11 @@ Play several games (moderate)
 Show and hide content depending on isGame (moderate)
 Display option for Expert difficulty upon completing Hard (moderate)
 
-Refactor "guesses" as "mistakes"
+Refactor "guesses" as "mistakes" (minor)
+
 
 Clarify theme (moderate)
+Change difficulty settings according to theme
 Style according to theme (major)
 Add background music in an iframe player (moderate)
 
