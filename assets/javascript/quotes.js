@@ -1,6 +1,6 @@
 // bank of phrases and short quotes hard-coded in an array
 
-var quoteBank = [
+export let quoteBank = [
     'be the change you want to see in the world',
     'an apple a day keeps the doctor away',
     'life is a beautiful struggle',
@@ -75,7 +75,14 @@ var quoteBank = [
     'you will soon witness a miracle',
     'you are a person of culture',
     'poverty is no disgrace',
-    'a feeling is an idea with roots'
+    'a feeling is an idea with roots',
+    'solitude has its own very strange beauty to it',
+    'the world is a strange and wonderful place',
+    'searchers after horror haunt strange far places',
+    'they certainly give strange names to diseases',
+    'a lot of hacking is playing with people',
+    'politics makes atrange bedfellows',
+    'i feel i am strange to all but the birds of america',
 ];
 
-var numberOfQuotes = quoteBank.length;
+export let numberOfQuotes = quoteBank.length;

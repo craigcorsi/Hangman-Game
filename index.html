@@ -4,31 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Themed Hangman</title>
+    <title>Oracle Request Line</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+SC:700i|Kotta+One" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <h1>Hangman</h1>
-    <p>Select a difficulty to get started:</p>
-    <div class="difficulty-select">
-        <button class="btn" id="selectEasy" value="Easy">Easy</button>  <!-- onclick="currentSession.startGame('Easy')" -->
-        <button class="btn" id="selectMedium" value="Medium" onclick="currentSession.startGame('Medium')">Medium</button>
-        <button class="btn" id="selectHard" value="Hard" onclick="currentSession.startGame('Hard')">Hard</button>
+    <div class="topLine clearfix">
+        <h1>Oracle Request Line (hangman)</h1><p class="scoreHeader">Successes: <span id="yourWins">0</span></p><p class="scoreHeader">Disgraces: <span id="yourLosses">0</span></p>
     </div>
-    <p>Wins: <span id="yourWins">0</span></p>
-    <p>Losses: <span id="yourLosses">0</span></p>
-    <h2>Current Game:</h2>
-    <p id="displayStatus"></p>
-    <div class="in-game-information">
-        <p>Current Difficulty: <span id="currentDifficulty"></span></p>
-        <p>Current Phrase: <span id="currentPhrase"></span></p>
-        <p>Number of Guesses Remaining: <span id="guessesRemaining"></span></p>
-        <p>Letters Already Guessed: <span id="lettersGuessed"></span></p>
-        <p>Press 'Escape' to forfeit!</p>
-    </div>
-
+    <p id="gameExplanation">Ah, a traveler seeks wisdom from the Oracle. But it will not simply GIVE you the advice!  You must guess which letters are contained within... </p>
 </header>
+
+<section class="grid">
+    <div class="col-1-2">
+        <img src="assets/images/oracle.jpg" alt="The oracle" width="50%"> 
+    </div><div class="col-1-2">
+        <div id="slideFromTop">
+            <div class="difficulty-select">
+                <p> ~ click to select a difficulty ~ </p><nav>
+                    <button class="btn" id="selectEasy" value="Easy">Easy</button>
+                    <button class="btn" id="selectMedium" value="Medium">Medium</button> 
+                    <button class="btn" id="selectHard" value="Hard">Hard</button> 
+                </nav>
+            </div>
+        </div>
+        <div id="slideFromBottom">
+            <h2>Current Game</h2><br>
+            <p id="indicateExpert"></p>
+            <div class="in-game-information">
+                <p>Current Difficulty: <span id="currentDifficulty"></span></p>
+                <p>Current Phrase: <span id="currentPhrase"></span></p>
+                <p>Number of Lives Remaining: <span id="livesRemaining"></span></p>
+                <p>Letters Already Guessed: <span id="lettersGuessed"></span></p>
+                <p>Press 'Escape' to forfeit... for shame!!!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 
 
