@@ -1,21 +1,11 @@
-// Clarified ``Oracle Request Line'' theme:
+
 // You ask the oracle for wisdom, but you have to guess the letters or you will be overwhelmed by the sheer power of wisdom!
-
-// Always displaying the h1, wins, and losses in the header
-// Always displaying the Oracle in the bottom right (desktop) or at the bottom (mobile).
-// The Easy/Medium/Hard toggle, and the initial p text collapses in game, at the bottom left (wipe down then up)
-// The current game with all running stats and instructions, collapsible and at the bottom left (wipe up then down)
-
 
 // TO BE DONE:
 
 /*
-
-Implement a custom font.
 Implement Showing and Hiding
 Implement color changes
-
-
 Add background music in an iframe player (moderate)
 */
 
